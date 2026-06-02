@@ -1,0 +1,10 @@
+fastapi
+redis
+aioredis
+uvicorn
+colorlog
+openai
+python-dotenv
+requests
+playwright
+matplotlib
