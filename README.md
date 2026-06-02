@@ -16,7 +16,7 @@
    任务队列需要redis，通过redis进行获取返回的结果ID，再根据ID进行查询数据内容，默认本地redis，详情配置在othertool.conredis文件  
    默认是无头浏览器，开启俩个获取有效的token就行，因为接口有限制，开多个也能获取，但是要实现多代理IP去请求接口，不然也是返回限制无法获取  
 
-4. **redis本地仓库**:  
+4. **fastapi配置**:  
    api_method.rating_fastapi.py  
    是接口设置文件，默认Token是API_TOKEN参数，可自行更改，更改后header的Token需要更改为自己设置的token  
 
