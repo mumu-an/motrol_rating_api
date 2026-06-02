@@ -6,7 +6,7 @@
    需要根据requirements.txt安装依赖  
     cd到项目目录 linux操作可能是  
    ```bash
-   python3 -m pip install -r requirement.txy
+   python3 -m pip install -r requirement.txt
    ```
 2. **地址下载**:  
    https://github.com/adryfish/fingerprint-chromium/releases/download/142.0.7444.175/ungoogled-chromium-142.0.7444.175-1-x86_64_linux.tar.xz  
