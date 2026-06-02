@@ -1,0 +1,2 @@
+# motrol_rating_api
+linux版本接口化获取rating
