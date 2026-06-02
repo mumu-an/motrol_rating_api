@@ -2,30 +2,30 @@
 接口化获取motrol牌谱rating图
 
 ## 使用说明
-1. **安装依赖**:
+1. **安装依赖**:  
    需要根据requirements.txt安装依赖  
     cd到项目目录 linux操作可能是  
    ```bash
    python3 -m pip install -r requirement.txy
    ```
-2. **地址下载**:
-   https://github.com/adryfish/fingerprint-chromium/releases/download/142.0.7444.175/ungoogled-chromium-142.0.7444.175-1-x86_64_linux.tar.xz 
+2. **地址下载**:  
+   https://github.com/adryfish/fingerprint-chromium/releases/download/142.0.7444.175/ungoogled-chromium-142.0.7444.175-1-x86_64_linux.tar.xz  
    网址下载压缩包，解压里面的文件到本地，然后重新压缩为zip格式，再上传到服务器，再解压文件，文件夹重命名为fingerprint_browser  
 
-3. **redis本地仓库**:
+3. **redis本地仓库**:  
    任务队列需要redis，通过redis进行获取返回的结果ID，再根据ID进行查询数据内容，默认本地redis，详情配置在othertool.conredis文件  
    默认是无头浏览器，开启俩个获取有效的token就行，因为接口有限制，开多个也能获取，但是要实现多代理IP去请求接口，不然也是返回限制无法获取  
 
-4. **redis本地仓库**:
+4. **redis本地仓库**:  
    api_method.rating_fastapi.py  
    是接口设置文件，默认Token是API_TOKEN参数，可自行更改，更改后header的Token需要更改为自己设置的token  
 
-5. **启动服务，默认 29507 端口，可自行更改**:
+5. **启动服务，默认 29507 端口，可自行更改**:  
    ```bash
    python3 -m main.py
    ```
 
-6. **接口1：**:
+6. **接口1：**:  
     curl:
     ```bash
     curl --location 'http://{服务器ip}:29507/motrol/submit' \
@@ -57,7 +57,7 @@
     "mode": "12"  
     "mode": "16"  
 
-7. **接口2：**:
+7. **接口2：**:  
     curl:
     ```bash
     curl --location 'http://{服务器ip}:29507/result/name_20_1780371011577158561' \
@@ -73,7 +73,7 @@
     或  
     图片资源  
 
-8. **接口3：**:
+8. **接口3：**:  
     ```bash
     curl --location 'http://{服务器ip}:29507/motrol/submit_paipu' \
     --header 'Token: mumu' \
@@ -89,7 +89,7 @@
     }  
     获取单个牌谱的rating，若能查到pt也会获取pt  
 
-9. **接口4：**:
+9. **接口4：**:  
     ```bash
     curl --location 'http://{服务器ip}:29507/task_delete/name_100_1780390096501063493' \
     --header 'Token: mumu'
@@ -100,7 +100,7 @@
     }  
     删除指定任务，防止过多任务占用资源  
 
-10. **可能用到的linux命令**:
+10. **可能用到的linux命令**:  
     更新apt:
     ```bash
     sudo apt update
