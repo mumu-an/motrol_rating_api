@@ -11,7 +11,7 @@ class ChromeGetToken:
     def __init__(self, user_name="user_data"):
         self.playwright = None
         BASE_DIR = os.getcwd()
-        self.CHROME_PATH = os.path.join(BASE_DIR, "fingerprint_browser", "chrome.exe")
+        self.CHROME_PATH = os.path.join(BASE_DIR, "fingerprint_browser", "chrome")
         self.USER_DATA_DIR = os.path.join(BASE_DIR, "data", user_name)
         self.DEFAULT_WINDOW_SIZE = {"width": 1600, "height": 900}
         self.BROWSER_ARGS = [
