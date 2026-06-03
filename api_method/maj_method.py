@@ -23,7 +23,7 @@ class AmaeKoromo:
             'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36'
         }
 
-    def get_historydata(self, player_id=8685617, timestamp=int(time.time() * 1000), limit=100, mode=".".join(["12"]), paipu_uuid=None):
+    def get_historydata(self, player_id=8685617, timestamp=None, limit=100, mode=".".join(["12"]), paipu_uuid=None):
         """
         查询牌谱屋指定段位场的条件数据
         :param player_id: 玩家ID
@@ -32,6 +32,8 @@ class AmaeKoromo:
         :param mode: 查询的段位场，金东8，金9，玉12，玉东11，王16，格式".".join(["8","9","12"])
         :return: 返回历史对局的数据ID，顺序是旧到新，方便做表统计
         """
+        if timestamp is None:
+            timestamp = int(time.time() * 1000)
         result = {}
 
         while limit > 0:
