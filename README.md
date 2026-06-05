@@ -68,7 +68,7 @@
         "status": "pending",
         "create_time": "2026-06-01 18:20:47",
         "total": 100,
-        "finished": 66
+        "finished": 65
     }  
     或  
     图片资源  
